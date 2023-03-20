@@ -1,10 +1,11 @@
+import SelectsGlass from "./BT3_selectsGlass/SelectsGlass";
 
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+   <div>
+    <SelectsGlass/>
+   </div>
   );
 }
 

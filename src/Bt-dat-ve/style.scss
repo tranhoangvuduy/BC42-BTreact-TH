@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', sans-serif;
+  // background: #222222;
+  background-image: url(../../public/img/bgmovie.jpg) ;
+  color:yellow;
+  font-size: 14px;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.showcase {
+  margin: 0 0 48px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background:blue;
+  padding: 12px;
+  border-radius: 4px;
+  color: white;
+}
+
+.showcase li {
+  margin: 0 12px;
+}
+
+.hangGhe {
+  margin-left: -20px;
+}
+
+.cinema {
+  margin-bottom: 18px;
+  perspective: 400px;
+
+  display: grid;
+  place-items: center;
+  grid-gap: 24px;
+}
+
+.cinema .screen {
+  height: 70px;
+  background: white;
+  width: 100%;
+  transform: rotateX(-30deg) scale(1.1);
+  box-shadow: 0 3px 10px 2px;
+}
+
+.row .seat:nth-of-type(8n + 1) {
+  margin-left: 30px;
+}
+
+.row .seat:nth-of-type(1n + 2) {
+  margin-right: 2px;
+}
+
+.hangGhe {
+  transform: translateY(15px);
+}
+
+.seat {
+  display: inline-block;
+  background: whitesmoke;
+  width: 60px;
+  height: 20px;
+ 
+  transition: transform 0.3s ease-in-out;
+
+  position: relative;
+  top: 1px;
+}
+
+.seat.occupied {
+  background: red;
+}
+
+.seat.selected {
+ 
+  background: green !important;
+}
+
+.btn-cancel {
+  transform: translateX(30px);
+}
